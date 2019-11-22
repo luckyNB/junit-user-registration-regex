@@ -37,6 +37,16 @@ public class UserValidator {
         }
     }
 
+    public static boolean validateMobileNo(String MobileNo) {
+        user_Registation_Pattern = Pattern.compile("[0-9]{2}[: :][0-9]{10}");
+        Matcher matcher  = user_Registation_Pattern.matcher(MobileNo);
+        if (matcher.matches()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
 
 

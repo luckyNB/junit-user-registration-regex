@@ -23,5 +23,10 @@ public class UserValidation {
         Assert.assertEquals(true, result);
     }
 
+    @Test
+    public void givenMobileNo_WhenProper_ShouldReturnTrue() {
+        boolean result = userValidator.validateMobileNo("91 7030493048");
+        Assert.assertEquals(true, result);
+    }
 
 }
