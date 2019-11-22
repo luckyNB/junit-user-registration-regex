@@ -27,7 +27,15 @@ public class UserValidator {
             return false;
         }
     }
-
+    public static boolean validateEmail(String emailId) {
+        user_Registation_Pattern = Pattern.compile("^([a-zA-Z0-9]+)([!@#$%^&][a-zA-Z0-9]+)?[@][a-zA-Z]+([.][a-z]{2,3})([.][a-z]{2})?$");
+        Matcher matcher  = user_Registation_Pattern.matcher(emailId);
+        if (matcher.matches()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 }
 
